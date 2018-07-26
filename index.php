@@ -10,14 +10,19 @@
 </head>
 <body>
     <h1>Private Cloud</h1>
-    <table>
+    <table id="files">
+        <tr>
+            <th>Filename</th>
+            <th>Size</th>
+        </tr>
 
     <?php
         $files = scandir('.');
         foreach ($files as $file) {
-            echo "<a href='".(string)$file."'><tr><td>";
-            echo $file;
-            echo "</tr></td></a>";
+            echo "<tr>";
+            echo "<td>".(string)$file."</td>";
+            echo "<td>".(string)filesize($file)."</td>";
+            echo "</tr>";
         }
     ?>
 

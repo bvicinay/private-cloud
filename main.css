@@ -1,0 +1,10 @@
+#files tr:first-child, #files tr:nth-child(2) {
+    color: red;
+    display:none;
+}
+
+#files {
+    width: 100%;
+    max-width: 1000px;
+    
+}
