@@ -1,10 +1,90 @@
-#files tr:first-child, #files tr:nth-child(2) {
-    color: red;
-    display:none;
+* {
+    font-family: "Roboto", sans-serif;
 }
 
+body {
+    padding: 20px 50px;
+    background-color: #fffaff;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #3092ed;
+    font-size: 22px;
+    text-decoration: none;
+    margin-left:0px;
+    font-weight: 500;
+}
 #files {
     width: 100%;
     max-width: 1000px;
-    
+    border-collapse: collapse;
+    margin-top: -10px;
+}
+
+tr:hover {
+    background-color: rgba(106, 128, 255, 0.123);
+}
+.share-btn {
+    opacity: 0.3;
+    width: 20px;
+}
+.share-btn:hover {
+    opacity: 0.9;
+}
+
+#table-header {
+    background-color: rgba(211, 211, 211, 0.3);
+    border-bottom: 2px lightgray solid;
+    text-align: left;
+}
+tr {
+    cursor: pointer;
+    border-bottom: 1px lightgray solid;
+}
+
+td, th {
+    padding: 15px 15px;
+}
+
+.folder::before {
+    content: url('folder_icon.svg');
+    display:inline-block;
+    width: 18px;
+    vertical-align: middle;
+    margin-right: 10px;    
+}
+
+#logo {
+    width: 70px;
+    height: auto;
+    margin-left: -20px;
+}
+#copy-clipboard {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+#btn-tray {
+    margin-top: 20px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+}
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
 }
